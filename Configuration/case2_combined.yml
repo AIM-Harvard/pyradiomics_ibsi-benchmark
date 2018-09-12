@@ -1,0 +1,17 @@
+imageType:
+  Original: {}
+
+setting:
+  binCount: 32
+
+  interpolator: 'sitkLinear'
+  resampledPixelSpacing: [2, 2, 0]
+
+  resegmentRange: [-500, 400]
+
+  force2D: True
+  weightingNorm: 'no_weighting'
+
+featureClass:
+  glcm:
+  glrlm:

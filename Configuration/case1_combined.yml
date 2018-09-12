@@ -1,0 +1,16 @@
+imageType:
+  Original: {}
+
+setting:
+  binWidth: 25
+
+  correctMask: true
+  force2D: true
+
+  resegmentRange: [-500, 400]
+
+  weightingNorm: 'no_weighting'
+
+featureClass:
+  glcm:
+  glrlm:

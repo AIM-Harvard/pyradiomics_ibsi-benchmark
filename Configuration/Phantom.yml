@@ -1,0 +1,55 @@
+
+# Settings to use, possible settings are mentioned in the documentation at the start of the modules.
+setting:
+  binWidth: 1
+  label: 1
+  interpolator: 'sitkBSpline' # This is an enumerated value, here None is not allowed
+  resampledPixelSpacing: # This disables resampling, as it is interpreted as None, to enable it, specify spacing in x, y, z as [x, y , z]
+  weightingNorm: # If no value is specified, it is interpreted as None
+  voxelArrayShift: 0
+
+# Input images to use: original for unfiltered image and/or any other filters, see documentation of featureextractor.py
+# for possible values
+imageType:
+  Original: {} # for dictionaries / mappings, None values are not allowed, '{}' is interpreted as an empty dictionary
+
+# Featureclasses, from which features must be calculated. If a featureclass is not mentioned, no features are calculated
+# for that class. Otherwise, the specified features are calculated, or, if none are specified, all are calculated.
+featureClass:
+  firstorder:
+    - 10Percentile
+    - 90Percentile
+    - Energy
+    - InterquartileRange
+    - Kurtosis
+    - Maximum
+    - Mean
+    - MeanAbsoluteDeviation
+    - Median
+    - Minimum
+    - Range
+    - RobustMeanAbsoluteDeviation
+    - RootMeanSquared
+    - Skewness
+    - StandardDeviation
+    - Variance
+  shape:
+    - "Volume"
+    - "SurfaceArea"
+    - "SurfaceVolumeRatio"
+    - "Compactness1"
+    - "Compactness2"
+    - "SphericalDisproportion"
+    - "Sphericity"
+    - "Maximum3DDiameter"
+    - "MajorAxis"
+    - "MinorAxis"
+    - "LeastAxis"
+    - "Elongation"
+    - "Flatness"
+  glcm:
+  glrlm:
+  glszm:
+  ngtdm:
+  gldm:
+  

@@ -1,0 +1,51 @@
+imageType:
+  Original: {}
+
+setting:
+  binCount: 32
+
+  interpolator: 'sitkLinear'
+  resampledPixelSpacing: [2, 2, 2]
+
+  resegmentRange: [-3, 3]
+  resegmentMode: 'sigma'
+
+featureClass:
+  firstorder:
+    - 10Percentile
+    - 90Percentile
+    - Energy
+    - InterquartileRange
+    - Kurtosis
+    - Maximum
+    - Mean
+    - MeanAbsoluteDeviation
+    - Median
+    - Minimum
+    - Range
+    - RobustMeanAbsoluteDeviation
+    - RootMeanSquared
+    - Skewness
+    - StandardDeviation
+    - Variance
+    - Entropy
+    - Uniformity
+  shape:
+    - Volume
+    - SurfaceArea
+    - SurfaceVolumeRatio
+    - Compactness1
+    - Compactness2
+    - SphericalDisproportion
+    - Sphericity
+    - Maximum3DDiameter
+    - MajorAxis
+    - MinorAxis
+    - LeastAxis
+    - Elongation
+    - Flatness
+  glcm:
+  glrlm:
+  glszm:
+  ngtdm:
+  gldm:
