@@ -33,6 +33,8 @@ featureClass:
     - Skewness
     - StandardDeviation
     - Variance
+    - Entropy
+    - Uniformity
   shape:
     - "Volume"
     - "SurfaceArea"

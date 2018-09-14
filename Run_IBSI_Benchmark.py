@@ -5,6 +5,7 @@ import os
 import numpy as np
 import pandas as pd
 import SimpleITK as sitk
+import six
 
 import radiomics
 from radiomics import setVerbosity, featureextractor
@@ -14,7 +15,7 @@ if not os.path.isdir("results"):
 
 CASES = range(1, 6)
 TYPES = ['', '_Combined']
-IBSI_RESAMPLING = True
+IBSI_RESAMPLING = False
 
 #"""
 rLogger = radiomics.logger
@@ -49,7 +50,6 @@ def run_phantom():
         continue
       extractor.loadParams(params)
       extractor.addProvenance(provenance_on=(t == ''))
-      extractor.settings['interpolator'] = None
       extractor.settings['force2D'] = e == '2D'
 
       fv = pd.Series(extractor.execute(image, mask))
@@ -67,27 +67,21 @@ def run_phantom():
     #result_series.to_csv('resCase%d.csv' % case_idx)  # Uncomment to enable saving intermediate results
   return result_series
 
+
 def run_case(case_idx, image, mask):
   ibsiLogger.info('################################### Extracting Case %d #############################' % case_idx)
   extractor = featureextractor.RadiomicsFeaturesExtractor()
 
-  if IBSI_RESAMPLING:
-    if case_idx == 1:
-      pass
-    elif case_idx == 2:
-      image, mask = IBSI_resampling(image, mask, (2, 2, 0), 0)
-    elif case_idx == 5:
-      image, mask = IBSI_resampling(image, mask, (2, 2, 2), 0, interpolator=sitk.sitkBSpline)
-    else:
-      image, mask = IBSI_resampling(image, mask, (2, 2, 2), 0)
-
   result_series = pd.Series()
   for t in TYPES:
     ibsiLogger.info('######################### TYPE %s ####################' % t)
+
     params = os.path.join('Configuration', 'case%d%s.yml' % (case_idx, t))
     if not os.path.isfile(params):
       continue
+
     extractor.loadParams(params)
+    #extractor.settings['grayValuePrecision'] = 0  # round to nearest integer when using IBSI resampling
     extractor.addProvenance(provenance_on=(t == ''))
 
     fv = pd.Series(extractor.execute(image, mask))
@@ -99,15 +93,25 @@ def run_case(case_idx, image, mask):
       fv = fv.add_prefix('2D_')
     else:
       fv = fv.add_prefix('3D_')
+
     result_series = result_series.append(fv)
 
   result_series.name = case_idx
-  #result_series.to_csv('resCase%d.csv' % case_idx)  # Uncomment to enable saving intermediate results
   return result_series
 
 
-def IBSI_resampling(image, mask, spacing, grayValuePrecision=None, interpolator=sitk.sitkLinear):
+def IBSI_resampling(image, mask, **kwargs):
   # resample image to new spacing, align centers of both resampling grids.
+  spacing = kwargs.get('resampledPixelSpacing')
+  grayValuePrecision = kwargs.get('grayValuePrecision')
+  interpolator = kwargs.get('interpolator', sitk.sitkLinear)
+
+  try:
+    if isinstance(interpolator, six.string_types):
+      interpolator = getattr(sitk, interpolator)
+  except Exception:
+    ibsiLogger.warning('interpolator "%s" not recognized, using sitkLinear', interpolator)
+    interpolator = sitk.sitkLinear
 
   im_spacing = np.array(image.GetSpacing(), dtype='float')
   im_size = np.array(image.GetSize(), dtype='float')
@@ -134,7 +138,6 @@ def IBSI_resampling(image, mask, spacing, grayValuePrecision=None, interpolator=
   rif.SetInterpolator(interpolator)
   res_im = rif.Execute(sitk.Cast(image, sitk.sitkFloat32))
 
-  grayValuePrecision = None
   # Round to n decimals (0 = to nearest integer)
   if grayValuePrecision is not None:
     ibsiLogger.debug('Rounding Image Gray values to %d decimals', grayValuePrecision)
@@ -175,21 +178,43 @@ def index_func(series, *args, **kwargs):
   return series
 
 
+def correct_kurtosis(series, *args, **kwargs):
+  if 'pyradiomics_feature' not in series:
+    return series
+
+  if 'firstorder_Kurtosis' not in str(series['pyradiomics_feature']):
+    return series
+
+  idx_loc = series.index.get_loc('pyradiomics_feature')
+
+  if 'idx' in series:
+    idx_loc += 1
+
+  vals = []
+  for val in series.iloc[idx_loc+1:]:
+    vals.append(val)
+
+  for val_idx, value in enumerate(vals):
+    try:
+      # new_val = eval(value)
+      series.values[int(idx_loc + 1 + val_idx)] = value - 3
+    except:
+      pass
+  return series
+
+
 if __name__ == '__main__':
+  if IBSI_RESAMPLING:
+    radiomics.imageoperations.resampleImage = IBSI_resampling
+
   im = sitk.ReadImage(os.path.join('Data', 'Patient Cases', 'PAT1', 'PAT1.nrrd'))
   ma = sitk.ReadImage(os.path.join('Data', 'Patient Cases', 'PAT1', 'GTV.nrrd'))
-
-  rif = sitk.ResampleImageFilter()
-  rif.SetReferenceImage(im)
-  rif.SetInterpolator(sitk.sitkNearestNeighbor)
-  rif.SetOutputPixelType(ma.GetPixelID())
-  ma = rif.Execute(ma)
 
   mapping_file = os.path.join('Data', 'Benchmark', 'mapping_phantom.csv')
   mapping = pd.read_csv(mapping_file)
 
   results = mapping.join(run_phantom(), on='pyradiomics_feature', how='left')
-  results = results.apply(index_func, axis=1)
+  results = results.apply(correct_kurtosis, axis=1)
 
   results.sort_index(inplace=True)
   results.to_csv('results/results_phantom.csv')
@@ -200,6 +225,7 @@ if __name__ == '__main__':
 
     results = mapping.join(run_case(case, im, ma), on='pyradiomics_feature', how='left')
     results = results.apply(index_func, axis=1)
+    results = results.apply(correct_kurtosis, axis=1)
 
     results.sort_index(inplace=True)
     results.to_csv('results/results_case%s.csv' % case)
