@@ -5,8 +5,8 @@ Public Sub Clear_results()
         xlrow = 2
         
         'Copy values
-        Do Until IsEmpty(ActiveWorkbook.Sheets(i + 1).Cells(xlrow, 10).Value)
-            ActiveWorkbook.Sheets(i + 1).Cells(xlrow, 7).Value = Nothing
+        Do Until IsEmpty(ActiveWorkbook.Sheets(i).Cells(xlrow, 10).Value)
+            ActiveWorkbook.Sheets(i).Cells(xlrow, 7).Value = ""
             
             xlrow = xlrow + 1
         Loop
