@@ -36,19 +36,20 @@ featureClass:
     - Entropy
     - Uniformity
   shape:
-    - "Volume"
-    - "SurfaceArea"
-    - "SurfaceVolumeRatio"
-    - "Compactness1"
-    - "Compactness2"
-    - "SphericalDisproportion"
-    - "Sphericity"
-    - "Maximum3DDiameter"
-    - "MajorAxis"
-    - "MinorAxis"
-    - "LeastAxis"
-    - "Elongation"
-    - "Flatness"
+    - Volume
+    - ApproximateVolume
+    - SurfaceArea
+    - SurfaceVolumeRatio
+    - Compactness1
+    - Compactness2
+    - SphericalDisproportion
+    - Sphericity
+    - Maximum3DDiameter
+    - MajorAxis
+    - MinorAxis
+    - LeastAxis
+    - Elongation
+    - Flatness
   glcm:
   glrlm:
   glszm:

@@ -33,6 +33,7 @@ featureClass:
     - Uniformity
   shape:
     - Volume
+    - ApproximateVolume
     - SurfaceArea
     - SurfaceVolumeRatio
     - Compactness1
