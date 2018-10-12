@@ -39,8 +39,8 @@ def run_phantom():
   ibsiLogger.info('################################### Extracting Phantom #############################')
   extractor = featureextractor.RadiomicsFeaturesExtractor()
 
-  image = sitk.ReadImage(os.path.join('Data', 'Digital Phantom', 'Phantom.nrrd'))
-  mask = sitk.ReadImage(os.path.join('Data', 'Digital Phantom', 'Phantom-label.nrrd'))
+  image = sitk.ReadImage(os.path.join('data', 'digital_phantom', 'Phantom.nrrd'))
+  mask = sitk.ReadImage(os.path.join('data', 'digital_phantom', 'Phantom-label.nrrd'))
 
   result_series = pd.Series()
   extraction_mode = ('2D', '3D')
@@ -48,7 +48,7 @@ def run_phantom():
     ibsiLogger.info('######################### MODE %s ####################' % e)
     for t in TYPES:
       ibsiLogger.info('######################### TYPE %s ####################' % t)
-      params = os.path.join('Configuration', 'Phantom%s.yml' % t)
+      params = os.path.join('configuration', 'Phantom%s.yml' % t)
       if not os.path.isfile(params):
         continue
       extractor.loadParams(params)
@@ -81,7 +81,7 @@ def run_case(case_idx, image, mask):
   for t in TYPES:
     ibsiLogger.info('######################### TYPE %s ####################' % t)
 
-    params = os.path.join('Configuration', 'case%d%s.yml' % (case_idx, t))
+    params = os.path.join('configuration', 'case%d%s.yml' % (case_idx, t))
     if not os.path.isfile(params):
       continue
 
@@ -259,7 +259,7 @@ if __name__ == '__main__':
   if IBSI_RESAMPLING:
     radiomics.imageoperations.resampleImage = IBSI_resampling
 
-  mapping_file = os.path.join('Data', 'Benchmark', 'mapping_phantom.csv')
+  mapping_file = os.path.join('mapping', 'mapping_phantom.csv')
   mapping = pd.read_csv(mapping_file)
 
   results = mapping.join(run_phantom(), on='pyradiomics_feature', how='left')
@@ -268,11 +268,11 @@ if __name__ == '__main__':
   results.sort_index(inplace=True)
   results.to_csv('results/results_phantom.csv')
 
-  im = sitk.ReadImage(os.path.join('Data', 'Patient Cases', 'PAT1', 'PAT1.nrrd'))
-  ma = sitk.ReadImage(os.path.join('Data', 'Patient Cases', 'PAT1', 'GTV.nrrd'))
+  im = sitk.ReadImage(os.path.join('data', 'patient_cases', 'PAT1', 'PAT1.nrrd'))
+  ma = sitk.ReadImage(os.path.join('data', 'patient_cases', 'PAT1', 'GTV.nrrd'))
 
   for case in CASES:
-    mapping_file = os.path.join('Data', 'Benchmark', 'mapping_case%s.csv' % case)
+    mapping_file = os.path.join('mapping', 'mapping_case%s.csv' % case)
     mapping = pd.read_csv(mapping_file)
 
     results = mapping.join(run_case(case, im, ma), on='pyradiomics_feature', how='left')
