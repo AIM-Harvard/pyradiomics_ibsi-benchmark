@@ -53,14 +53,54 @@ Sub parse_file(ByVal fname As String, ByVal targetSheet As Worksheet)
     Dim xlrow As Integer
     xlrow = 2
     
+    Dim found As Boolean
+
+    Dim target_tag_column As Integer
+    Dim target_value_column As Integer
+
+    Dim target_row_start As Integer
+    Dim target_row_temp As Integer
+    Dim target_row As Integer
+
+    target_tag_column = 10
+    target_value_column = 7
+    target_row_start = 2
+    target_row_temp = target_row_start
+
     'Copy values
-    Do Until IsEmpty(targetSheet.Cells(xlrow, 10).Value)
-        If targetSheet.Cells(xlrow, 10).Value <> source_sheet.Cells(xlrow, Tag_column).Value Then
-            MsgBox "Tag mismatch! " & targetSheet.Cells(xlrow, 10).Value & " != " & source_sheet.Cells(xlrow, Tag_column).Value
+    'Do Until IsEmpty(targetSheet.Cells(xlrow, 10).Value)
+    Do Until IsEmpty(source_sheet.Cells(xlrow, Tag_column).Value)
+        found = False
+        target_row = target_row_temp
+
+        Do While Not IsEmpty(targetSheet.Cells(target_row, target_tag_column))
+            If targetSheet.Cells(target_row, target_tag_column).Value = source_sheet.Cells(xlrow, Tag_column).Value Then
+                found = True
+                targetSheet.Cells(target_row, target_value_column).Value = source_sheet.Cells(xlrow, clmn).Value
+                Exit Do
+            End If
+            target_row = target_row + 1
+        Loop
+
+        If found Then
+            target_row_temp = target_row + 1
+        Else
+            For target_row = target_row_start To target_row_temp
+                If targetSheet.Cells(target_row, target_tag_column).Value = source_sheet.Cells(xlrow, Tag_column).Value Then
+                    found = True
+                    targetSheet.Cells(target_row, target_value_column).Value = source_sheet.Cells(xlrow, clmn).Value
+                    Exit For
+                End If
+            Next
+
+            If found Then
+                target_row_temp = target_row + 1
+            Else
+                'If still not found, then the tag is not present in the target sheet
+                MsgBox "Tag " & source_sheet.Cells(xlrow, Tag_column).Value & " not found!"
+            End If
         End If
-        
-        targetSheet.Cells(xlrow, 7).Value = source_sheet.Cells(xlrow, clmn).Value
-        
+
         xlrow = xlrow + 1
     Loop
 cleanup:
