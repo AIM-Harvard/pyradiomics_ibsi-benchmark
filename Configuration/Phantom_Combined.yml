@@ -17,5 +17,28 @@ imageType:
 # for that class. Otherwise, the specified features are calculated, or, if none are specified, all are calculated.
 featureClass:
   glcm:
+    - Autocorrelation
+    - ClusterProminence
+    - ClusterShade
+    - ClusterTendency
+    - Contrast
+    - Correlation
+    - DifferenceAverage
+    - DifferenceEntropy
+    - DifferenceVariance
+    - Id
+    - Idm
+    - Idmn
+    - Idn
+    - Imc1
+    - Imc2
+    - InverseVariance
+    - JointAverage
+    - JointEnergy
+    - JointEntropy
+    - MaximumProbability
+    - SumAverage
+    - SumEntropy
+    - SumSquares
   glrlm:
   

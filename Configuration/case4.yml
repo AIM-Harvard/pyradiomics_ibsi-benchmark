@@ -31,8 +31,8 @@ featureClass:
     - Entropy
     - Uniformity
   shape:
-    - Volume
-    - ApproximateVolume
+    - MeshVolume
+    - VoxelVolume
     - SurfaceArea
     - SurfaceVolumeRatio
     - Compactness1
@@ -40,12 +40,35 @@ featureClass:
     - SphericalDisproportion
     - Sphericity
     - Maximum3DDiameter
-    - MajorAxis
-    - MinorAxis
-    - LeastAxis
+    - MajorAxisLength
+    - MinorAxisLength
+    - LeastAxisLength
     - Elongation
     - Flatness
   glcm:
+    - Autocorrelation
+    - ClusterProminence
+    - ClusterShade
+    - ClusterTendency
+    - Contrast
+    - Correlation
+    - DifferenceAverage
+    - DifferenceEntropy
+    - DifferenceVariance
+    - Id
+    - Idm
+    - Idmn
+    - Idn
+    - Imc1
+    - Imc2
+    - InverseVariance
+    - JointAverage
+    - JointEnergy
+    - JointEntropy
+    - MaximumProbability
+    - SumAverage
+    - SumEntropy
+    - SumSquares
   glrlm:
   glszm:
   ngtdm:

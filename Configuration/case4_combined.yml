@@ -14,4 +14,27 @@ setting:
 
 featureClass:
   glcm:
+    - Autocorrelation
+    - ClusterProminence
+    - ClusterShade
+    - ClusterTendency
+    - Contrast
+    - Correlation
+    - DifferenceAverage
+    - DifferenceEntropy
+    - DifferenceVariance
+    - Id
+    - Idm
+    - Idmn
+    - Idn
+    - Imc1
+    - Imc2
+    - InverseVariance
+    - JointAverage
+    - JointEnergy
+    - JointEntropy
+    - MaximumProbability
+    - SumAverage
+    - SumEntropy
+    - SumSquares
   glrlm:

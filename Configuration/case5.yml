@@ -7,7 +7,7 @@ setting:
   interpolator: 'sitkBSpline'
   resampledPixelSpacing: [2, 2, 2]
 
-  resegmentRange: [-500, 400]
+  resegmentRange: [-718, 400]  # [-1000, 400] absolute, [-3, 3] sigma
 
 featureClass:
   firstorder:
@@ -30,8 +30,8 @@ featureClass:
     - Entropy
     - Uniformity
   shape:
-    - Volume
-    - ApproximateVolume
+    - MeshVolume
+    - VoxelVolume
     - SurfaceArea
     - SurfaceVolumeRatio
     - Compactness1
@@ -39,12 +39,35 @@ featureClass:
     - SphericalDisproportion
     - Sphericity
     - Maximum3DDiameter
-    - MajorAxis
-    - MinorAxis
-    - LeastAxis
+    - MajorAxisLength
+    - MinorAxisLength
+    - LeastAxisLength
     - Elongation
     - Flatness
   glcm:
+    - Autocorrelation
+    - ClusterProminence
+    - ClusterShade
+    - ClusterTendency
+    - Contrast
+    - Correlation
+    - DifferenceAverage
+    - DifferenceEntropy
+    - DifferenceVariance
+    - Id
+    - Idm
+    - Idmn
+    - Idn
+    - Imc1
+    - Imc2
+    - InverseVariance
+    - JointAverage
+    - JointEnergy
+    - JointEntropy
+    - MaximumProbability
+    - SumAverage
+    - SumEntropy
+    - SumSquares
   glrlm:
   glszm:
   ngtdm:
