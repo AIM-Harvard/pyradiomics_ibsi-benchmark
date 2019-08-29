@@ -1,0 +1,328 @@
+ibsi_name,ibsi_code,pyradiomics_feature,idx,required_settings
+img_dim_x_init_img,,diagnostics_Image-original_Size,0,
+img_dim_y_init_img,,diagnostics_Image-original_Size,1,
+img_dim_z_init_img,,diagnostics_Image-original_Size,2,
+vox_dim_x_init_img,,diagnostics_Image-original_Spacing,0,
+vox_dim_y_init_img,,diagnostics_Image-original_Spacing,1,
+vox_dim_z_init_img,,diagnostics_Image-original_Spacing,2,
+mean_int_init_img,,diagnostics_Image-original_Mean,,
+min_int_init_img,,diagnostics_Image-original_Minimum,,
+max_int_init_img,,diagnostics_Image-original_Maximum,,
+img_dim_x_interp_img,,diagnostics_Image-interpolated_Size,0,
+img_dim_y_interp_img,,diagnostics_Image-interpolated_Size,1,
+img_dim_z_interp_img,,diagnostics_Image-interpolated_Size,2,
+vox_dim_x_interp_img,,diagnostics_Image-interpolated_Spacing,0,
+vox_dim_y_interp_img,,diagnostics_Image-interpolated_Spacing,1,
+vox_dim_z_interp_img,,diagnostics_Image-interpolated_Spacing,2,
+mean_int_interp_img,,diagnostics_Image-interpolated_Mean,,
+min_int_interp_img,,diagnostics_Image-interpolated_Minimum,,
+max_int_interp_img,,diagnostics_Image-interpolated_Maximum,,
+int_mask_dim_x_init_roi,,diagnostics_Mask-original_Size,0,
+int_mask_dim_y_init_roi,,diagnostics_Mask-original_Size,1,
+int_mask_dim_z_init_roi,,diagnostics_Mask-original_Size,2,
+int_mask_bb_dim_x_init_roi,,diagnostics_Mask-original_BoundingBox,3,
+int_mask_bb_dim_y_init_roi,,diagnostics_Mask-original_BoundingBox,4,
+int_mask_bb_dim_z_init_roi,,diagnostics_Mask-original_BoundingBox,5,
+morph_mask_bb_dim_x_init_roi,,diagnostics_Mask-original_BoundingBox,3,
+morph_mask_bb_dim_y_init_roi,,diagnostics_Mask-original_BoundingBox,4,
+morph_mask_bb_dim_z_init_roi,,diagnostics_Mask-original_BoundingBox,5,
+int_mask_vox_count_init_roi,,diagnostics_Mask-original_VoxelNum,,
+morph_mask_vox_count_init_roi,,diagnostics_Mask-original_VoxelNum,,
+int_mask_mean_int_init_roi,,diagnostics_Mask-original_Mean,,
+int_mask_min_int_init_roi,,diagnostics_Mask-original_Minimum,,
+int_mask_max_int_init_roi,,diagnostics_Mask-original_Maximum,,
+int_mask_dim_x_interp_roi,,diagnostics_Mask-interpolated_Size,0,
+int_mask_dim_y_interp_roi,,diagnostics_Mask-interpolated_Size,1,
+int_mask_dim_z_interp_roi,,diagnostics_Mask-interpolated_Size,2,
+int_mask_bb_dim_x_interp_roi,,diagnostics_Mask-interpolated_BoundingBox,3,
+int_mask_bb_dim_y_interp_roi,,diagnostics_Mask-interpolated_BoundingBox,4,
+int_mask_bb_dim_z_interp_roi,,diagnostics_Mask-interpolated_BoundingBox,5,
+morph_mask_bb_dim_x_interp_roi,,diagnostics_Mask-interpolated_BoundingBox,3,
+morph_mask_bb_dim_y_interp_roi,,diagnostics_Mask-interpolated_BoundingBox,4,
+morph_mask_bb_dim_z_interp_roi,,diagnostics_Mask-interpolated_BoundingBox,5,
+int_mask_vox_count_interp_roi,,diagnostics_Mask-interpolated_VoxelNum,,
+morph_mask_vox_count_interp_roi,,diagnostics_Mask-interpolated_VoxelNum,,
+int_mask_mean_int_interp_roi,,diagnostics_Mask-interpolated_Mean,,
+int_mask_min_int_interp_roi,,diagnostics_Mask-interpolated_Minimum,,
+int_mask_max_int_interp_roi,,diagnostics_Mask-interpolated_Maximum,,
+int_mask_dim_x_reseg_roi,,diagnostics_Mask-resegmented_Size,0,
+int_mask_dim_y_reseg_roi,,diagnostics_Mask-resegmented_Size,1,
+int_mask_dim_z_reseg_roi,,diagnostics_Mask-resegmented_Size,2,
+int_mask_bb_dim_x_reseg_roi,,diagnostics_Mask-resegmented_BoundingBox,3,
+int_mask_bb_dim_y_reseg_roi,,diagnostics_Mask-resegmented_BoundingBox,4,
+int_mask_bb_dim_z_reseg_roi,,diagnostics_Mask-resegmented_BoundingBox,5,
+morph_mask_bb_dim_x_reseg_roi,,diagnostics_Mask-resegmented_BoundingBox,3,
+morph_mask_bb_dim_y_reseg_roi,,diagnostics_Mask-resegmented_BoundingBox,4,
+morph_mask_bb_dim_z_reseg_roi,,diagnostics_Mask-resegmented_BoundingBox,5,
+int_mask_vox_count_reseg_roi,,diagnostics_Mask-resegmented_VoxelNum,,
+morph_mask_vox_count_reseg_roi,,diagnostics_Mask-interpolated_VoxelNum,,
+int_mask_mean_int_reseg_roi,,diagnostics_Mask-resegmented_Mean,,
+int_mask_min_int_reseg_roi,,diagnostics_Mask-resegmented_Minimum,,
+int_mask_max_int_reseg_roi,,diagnostics_Mask-resegmented_Maximum,,
+morph_volume,,original_shape_MeshVolume,,
+morph_vol_approx,,original_shape_VoxelVolume,,
+morph_area_mesh,,original_shape_SurfaceArea,,
+morph_av,,original_shape_SurfaceVolumeRatio,,
+morph_comp_1,,original_shape_Compactness1,,
+morph_comp_2,,original_shape_Compactness2,,
+morph_sph_dispr,,original_shape_SphericalDisproportion,,
+morph_sphericity,,original_shape_Sphericity,,
+morph_diam,,original_shape_Maximum3DDiameter,,
+morph_pca_maj_axis,,original_shape_MajorAxisLength,,
+morph_pca_min_axis,,original_shape_MinorAxisLength,,
+morph_pca_least_axis,,original_shape_LeastAxisLength,,
+morph_pca_elongation,,original_shape_Elongation,,
+morph_pca_flatness,,original_shape_Flatness,,
+stat_mean,,original_firstorder_Mean,,
+stat_var,,original_firstorder_Variance,,
+stat_skew,,original_firstorder_Skewness,,
+stat_kurt,,original_firstorder_Kurtosis,,
+stat_median,,original_firstorder_Median,,
+stat_min,,original_firstorder_Minimum,,
+stat_p10,,original_firstorder_10Percentile,,
+stat_p90,,original_firstorder_90Percentile,,
+stat_max,,original_firstorder_Maximum,,
+stat_iqr,,original_firstorder_InterquartileRange,,
+stat_range,,original_firstorder_Range,,
+stat_mad,,original_firstorder_MeanAbsoluteDeviation,,
+stat_rmad,,original_firstorder_RobustMeanAbsoluteDeviation,,
+stat_energy,,original_firstorder_Energy,,
+stat_rms,,original_firstorder_RootMeanSquared,,
+ih_entropy,,original_firstorder_Entropy,,
+ih_uniformity,,original_firstorder_Uniformity,,
+cm_joint_max_2_5D_avg,,original_glcm_MaximumProbability,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_joint_avg_2_5D_avg,,original_glcm_JointAverage,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_joint_var_2_5D_avg,,original_glcm_SumSquares,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_joint_entr_2_5D_avg,,original_glcm_JointEntropy,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_diff_avg_2_5D_avg,,original_glcm_DifferenceAverage,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_diff_var_2_5D_avg,,original_glcm_DifferenceVariance,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_diff_entr_2_5D_avg,,original_glcm_DifferenceEntropy,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_sum_avg_2_5D_avg,,original_glcm_SumAverage,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_sum_var_2_5D_avg,,original_glcm_ClusterTendency,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_sum_entr_2_5D_avg,,original_glcm_SumEntropy,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_energy_2_5D_avg,,original_glcm_JointEnergy,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_contrast_2_5D_avg,,original_glcm_Contrast,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_dissimilarity_2_5D_avg,,original_glcm_DifferenceAverage,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_inv_diff_2_5D_avg,,original_glcm_Id,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_inv_diff_norm_2_5D_avg,,original_glcm_Idn,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_inv_diff_mom_2_5D_avg,,original_glcm_Idm,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_inv_diff_mom_norm_2_5D_avg,,original_glcm_Idmn,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_inv_var_2_5D_avg,,original_glcm_InverseVariance,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_corr_2_5D_avg,,original_glcm_Correlation,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_auto_corr_2_5D_avg,,original_glcm_Autocorrelation,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_clust_tend_2_5D_avg,,original_glcm_ClusterTendency,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_clust_shade_2_5D_avg,,original_glcm_ClusterShade,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_clust_prom_2_5D_avg,,original_glcm_ClusterProminence,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_info_corr1_2_5D_avg,,original_glcm_Imc1,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_info_corr2_2_5D_avg,,original_glcm_Imc2,,"{""force2D"": True, ""weightingNorm"": None }"
+cm_joint_max_2_5D_comb,,original_glcm_MaximumProbability,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_joint_avg_2_5D_comb,,original_glcm_JointAverage,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_joint_var_2_5D_comb,,original_glcm_SumSquares,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_joint_entr_2_5D_comb,,original_glcm_JointEntropy,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_diff_avg_2_5D_comb,,original_glcm_DifferenceAverage,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_diff_var_2_5D_comb,,original_glcm_DifferenceVariance,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_diff_entr_2_5D_comb,,original_glcm_DifferenceEntropy,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_sum_avg_2_5D_comb,,original_glcm_SumAverage,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_sum_var_2_5D_comb,,original_glcm_ClusterTendency,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_sum_entr_2_5D_comb,,original_glcm_SumEntropy,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_energy_2_5D_comb,,original_glcm_JointEnergy,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_contrast_2_5D_comb,,original_glcm_Contrast,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_dissimilarity_2_5D_comb,,original_glcm_DifferenceAverage,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_2_5D_comb,,original_glcm_Id,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_norm_2_5D_comb,,original_glcm_Idn,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_mom_2_5D_comb,,original_glcm_Idm,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_mom_norm_2_5D_comb,,original_glcm_Idmn,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_var_2_5D_comb,,original_glcm_InverseVariance,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_corr_2_5D_comb,,original_glcm_Correlation,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_auto_corr_2_5D_comb,,original_glcm_Autocorrelation,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_clust_tend_2_5D_comb,,original_glcm_ClusterTendency,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_clust_shade_2_5D_comb,,original_glcm_ClusterShade,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_clust_prom_2_5D_comb,,original_glcm_ClusterProminence,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_info_corr1_2_5D_comb,,original_glcm_Imc1,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+cm_info_corr2_2_5D_comb,,original_glcm_Imc2,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_sre_2_5D_avg,,original_glrlm_ShortRunEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_lre_2_5D_avg,,original_glrlm_LongRunEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_lgre_2_5D_avg,,original_glrlm_LowGrayLevelRunEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_hgre_2_5D_avg,,original_glrlm_HighGrayLevelRunEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_srlge_2_5D_avg,,original_glrlm_ShortRunLowGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_srhge_2_5D_avg,,original_glrlm_ShortRunHighGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_lrlge_2_5D_avg,,original_glrlm_LongRunLowGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_lrhge_2_5D_avg,,original_glrlm_LongRunHighGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_glnu_2_5D_avg,,original_glrlm_GrayLevelNonUniformity,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_glnu_norm_2_5D_avg,,original_glrlm_GrayLevelNonUniformityNormalized,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_rlnu_2_5D_avg,,original_glrlm_RunLengthNonUniformity,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_rlnu_norm_2_5D_avg,,original_glrlm_RunLengthNonUniformityNormalized,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_r_perc_2_5D_avg,,original_glrlm_RunPercentage,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_gl_var_2_5D_avg,,original_glrlm_GrayLevelVariance,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_rl_var_2_5D_avg,,original_glrlm_RunVariance,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_rl_entr_2_5D_avg,,original_glrlm_RunEntropy,,"{""force2D"": True, ""weightingNorm"": None }"
+rlm_sre_2_5D_comb,,original_glrlm_ShortRunEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_lre_2_5D_comb,,original_glrlm_LongRunEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_lgre_2_5D_comb,,original_glrlm_LowGrayLevelRunEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_hgre_2_5D_comb,,original_glrlm_HighGrayLevelRunEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_srlge_2_5D_comb,,original_glrlm_ShortRunLowGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_srhge_2_5D_comb,,original_glrlm_ShortRunHighGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_lrlge_2_5D_comb,,original_glrlm_LongRunLowGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_lrhge_2_5D_comb,,original_glrlm_LongRunHighGrayLevelEmphasis,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_glnu_2_5D_comb,,original_glrlm_GrayLevelNonUniformity,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_glnu_norm_2_5D_comb,,original_glrlm_GrayLevelNonUniformityNormalized,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_rlnu_2_5D_comb,,original_glrlm_RunLengthNonUniformity,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_rlnu_norm_2_5D_comb,,original_glrlm_RunLengthNonUniformityNormalized,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_r_perc_2_5D_comb,,original_glrlm_RunPercentage,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_gl_var_2_5D_comb,,original_glrlm_GrayLevelVariance,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_rl_var_2_5D_comb,,original_glrlm_RunVariance,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+rlm_rl_entr_2_5D_comb,,original_glrlm_RunEntropy,,"{""force2D"": True, ""weightingNorm"": ""no_weighting"" }"
+szm_sze_2_5D,,original_glszm_SmallAreaEmphasis,,"{""force2D"": True}"
+szm_lze_2_5D,,original_glszm_LargeAreaEmphasis,,"{""force2D"": True}"
+szm_lgze_2_5D,,original_glszm_LowGrayLevelZoneEmphasis,,"{""force2D"": True}"
+szm_hgze_2_5D,,original_glszm_HighGrayLevelZoneEmphasis,,"{""force2D"": True}"
+szm_szlge_2_5D,,original_glszm_SmallAreaLowGrayLevelEmphasis,,"{""force2D"": True}"
+szm_szhge_2_5D,,original_glszm_SmallAreaHighGrayLevelEmphasis,,"{""force2D"": True}"
+szm_lzlge_2_5D,,original_glszm_LargeAreaLowGrayLevelEmphasis,,"{""force2D"": True}"
+szm_lzhge_2_5D,,original_glszm_LargeAreaHighGrayLevelEmphasis,,"{""force2D"": True}"
+szm_glnu_2_5D,,original_glszm_GrayLevelNonUniformity,,"{""force2D"": True}"
+szm_glnu_norm_2_5D,,original_glszm_GrayLevelNonUniformityNormalized,,"{""force2D"": True}"
+szm_zsnu_2_5D,,original_glszm_SizeZoneNonUniformity,,"{""force2D"": True}"
+szm_zsnu_norm_2_5D,,original_glszm_SizeZoneNonUniformityNormalized,,"{""force2D"": True}"
+szm_z_perc_2_5D,,original_glszm_ZonePercentage,,"{""force2D"": True}"
+szm_gl_var_2_5D,,original_glszm_GrayLevelVariance,,"{""force2D"": True}"
+szm_zs_var_2_5D,,original_glszm_ZoneVariance,,"{""force2D"": True}"
+szm_zs_entr_2_5D,,original_glszm_ZoneEntropy,,"{""force2D"": True}"
+ngt_coarseness_2_5D,,original_ngtdm_Coarseness,,"{""force2D"": True}"
+ngt_contrast_2_5D,,original_ngtdm_Contrast,,"{""force2D"": True}"
+ngt_busyness_2_5D,,original_ngtdm_Busyness,,"{""force2D"": True}"
+ngt_complexity_2_5D,,original_ngtdm_Complexity,,"{""force2D"": True}"
+ngt_strength_2_5D,,original_ngtdm_Strength,,"{""force2D"": True}"
+ngl_lde_2_5D,,original_gldm_SmallDependenceEmphasis,,"{""force2D"": True}"
+ngl_hde_2_5D,,original_gldm_LargeDependenceEmphasis,,"{""force2D"": True}"
+ngl_lgce_2_5D,,original_gldm_LowGrayLevelEmphasis,,"{""force2D"": True}"
+ngl_hgce_2_5D,,original_gldm_HighGrayLevelEmphasis,,"{""force2D"": True}"
+ngl_ldlge_2_5D,,original_gldm_SmallDependenceLowGrayLevelEmphasis,,"{""force2D"": True}"
+ngl_ldhge_2_5D,,original_gldm_SmallDependenceHighGrayLevelEmphasis,,"{""force2D"": True}"
+ngl_hdlge_2_5D,,original_gldm_LargeDependenceLowGrayLevelEmphasis,,"{""force2D"": True}"
+ngl_hdhge_2_5D,,original_gldm_LargeDependenceHighGrayLevelEmphasis,,"{""force2D"": True}"
+ngl_glnu_2_5D,,original_gldm_GrayLevelNonUniformity,,"{""force2D"": True}"
+ngl_glnu_norm_2_5D,,original_firstorder_Uniformity,,"{""force2D"": True}"
+ngl_dcnu_2_5D,,original_gldm_DependenceNonUniformity,,"{""force2D"": True}"
+ngl_dcnu_norm_2_5D,,original_gldm_DependenceNonUniformityNormalized,,"{""force2D"": True}"
+ngl_gl_var_2_5D,,original_gldm_GrayLevelVariance,,"{""force2D"": True}"
+ngl_dc_var_2_5D,,original_gldm_DependenceVariance,,"{""force2D"": True}"
+ngl_dc_entr_2_5D,,original_gldm_DependenceEntropy,,"{""force2D"": True}"
+cm_joint_max_3D_avg,,original_glcm_MaximumProbability,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_joint_avg_3D_avg,,original_glcm_JointAverage,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_joint_var_3D_avg,,original_glcm_SumSquares,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_joint_entr_3D_avg,,original_glcm_JointEntropy,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_diff_avg_3D_avg,,original_glcm_DifferenceAverage,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_diff_var_3D_avg,,original_glcm_DifferenceVariance,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_diff_entr_3D_avg,,original_glcm_DifferenceEntropy,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_sum_avg_3D_avg,,original_glcm_SumAverage,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_sum_var_3D_avg,,original_glcm_ClusterTendency,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_sum_entr_3D_avg,,original_glcm_SumEntropy,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_energy_3D_avg,,original_glcm_JointEnergy,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_contrast_3D_avg,,original_glcm_Contrast,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_dissimilarity_3D_avg,,original_glcm_DifferenceAverage,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_inv_diff_3D_avg,,original_glcm_Id,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_inv_diff_norm_3D_avg,,original_glcm_Idn,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_inv_diff_mom_3D_avg,,original_glcm_Idm,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_inv_diff_mom_norm_3D_avg,,original_glcm_Idmn,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_inv_var_3D_avg,,original_glcm_InverseVariance,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_corr_3D_avg,,original_glcm_Correlation,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_auto_corr_3D_avg,,original_glcm_Autocorrelation,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_clust_tend_3D_avg,,original_glcm_ClusterTendency,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_clust_shade_3D_avg,,original_glcm_ClusterShade,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_clust_prom_3D_avg,,original_glcm_ClusterProminence,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_info_corr1_3D_avg,,original_glcm_Imc1,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_info_corr2_3D_avg,,original_glcm_Imc2,,"{""force2D"": False, ""weightingNorm"": None }"
+cm_joint_max_3D_comb,,original_glcm_MaximumProbability,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_joint_avg_3D_comb,,original_glcm_JointAverage,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_joint_var_3D_comb,,original_glcm_SumSquares,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_joint_entr_3D_comb,,original_glcm_JointEntropy,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_diff_avg_3D_comb,,original_glcm_DifferenceAverage,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_diff_var_3D_comb,,original_glcm_DifferenceVariance,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_diff_entr_3D_comb,,original_glcm_DifferenceEntropy,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_sum_avg_3D_comb,,original_glcm_SumAverage,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_sum_var_3D_comb,,original_glcm_ClusterTendency,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_sum_entr_3D_comb,,original_glcm_SumEntropy,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_energy_3D_comb,,original_glcm_JointEnergy,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_contrast_3D_comb,,original_glcm_Contrast,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_dissimilarity_3D_comb,,original_glcm_DifferenceAverage,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_3D_comb,,original_glcm_Id,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_norm_3D_comb,,original_glcm_Idn,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_mom_3D_comb,,original_glcm_Idm,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_diff_mom_norm_3D_comb,,original_glcm_Idmn,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_inv_var_3D_comb,,original_glcm_InverseVariance,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_corr_3D_comb,,original_glcm_Correlation,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_auto_corr_3D_comb,,original_glcm_Autocorrelation,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_clust_tend_3D_comb,,original_glcm_ClusterTendency,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_clust_shade_3D_comb,,original_glcm_ClusterShade,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_clust_prom_3D_comb,,original_glcm_ClusterProminence,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_info_corr1_3D_comb,,original_glcm_Imc1,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+cm_info_corr2_3D_comb,,original_glcm_Imc2,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_sre_3D_avg,,original_glrlm_ShortRunEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_lre_3D_avg,,original_glrlm_LongRunEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_lgre_3D_avg,,original_glrlm_LowGrayLevelRunEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_hgre_3D_avg,,original_glrlm_HighGrayLevelRunEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_srlge_3D_avg,,original_glrlm_ShortRunLowGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_srhge_3D_avg,,original_glrlm_ShortRunHighGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_lrlge_3D_avg,,original_glrlm_LongRunLowGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_lrhge_3D_avg,,original_glrlm_LongRunHighGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_glnu_3D_avg,,original_glrlm_GrayLevelNonUniformity,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_glnu_norm_3D_avg,,original_glrlm_GrayLevelNonUniformityNormalized,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_rlnu_3D_avg,,original_glrlm_RunLengthNonUniformity,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_rlnu_norm_3D_avg,,original_glrlm_RunLengthNonUniformityNormalized,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_r_perc_3D_avg,,original_glrlm_RunPercentage,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_gl_var_3D_avg,,original_glrlm_GrayLevelVariance,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_rl_var_3D_avg,,original_glrlm_RunVariance,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_rl_entr_3D_avg,,original_glrlm_RunEntropy,,"{""force2D"": False, ""weightingNorm"": None }"
+rlm_sre_3D_comb,,original_glrlm_ShortRunEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_lre_3D_comb,,original_glrlm_LongRunEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_lgre_3D_comb,,original_glrlm_LowGrayLevelRunEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_hgre_3D_comb,,original_glrlm_HighGrayLevelRunEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_srlge_3D_comb,,original_glrlm_ShortRunLowGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_srhge_3D_comb,,original_glrlm_ShortRunHighGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_lrlge_3D_comb,,original_glrlm_LongRunLowGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_lrhge_3D_comb,,original_glrlm_LongRunHighGrayLevelEmphasis,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_glnu_3D_comb,,original_glrlm_GrayLevelNonUniformity,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_glnu_norm_3D_comb,,original_glrlm_GrayLevelNonUniformityNormalized,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_rlnu_3D_comb,,original_glrlm_RunLengthNonUniformity,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_rlnu_norm_3D_comb,,original_glrlm_RunLengthNonUniformityNormalized,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_r_perc_3D_comb,,original_glrlm_RunPercentage,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_gl_var_3D_comb,,original_glrlm_GrayLevelVariance,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_rl_var_3D_comb,,original_glrlm_RunVariance,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+rlm_rl_entr_3D_comb,,original_glrlm_RunEntropy,,"{""force2D"": False, ""weightingNorm"": ""no_weighting"" }"
+szm_sze_3D,,original_glszm_SmallAreaEmphasis,,"{""force2D"": False}"
+szm_lze_3D,,original_glszm_LargeAreaEmphasis,,"{""force2D"": False}"
+szm_lgze_3D,,original_glszm_LowGrayLevelZoneEmphasis,,"{""force2D"": False}"
+szm_hgze_3D,,original_glszm_HighGrayLevelZoneEmphasis,,"{""force2D"": False}"
+szm_szlge_3D,,original_glszm_SmallAreaLowGrayLevelEmphasis,,"{""force2D"": False}"
+szm_szhge_3D,,original_glszm_SmallAreaHighGrayLevelEmphasis,,"{""force2D"": False}"
+szm_lzlge_3D,,original_glszm_LargeAreaLowGrayLevelEmphasis,,"{""force2D"": False}"
+szm_lzhge_3D,,original_glszm_LargeAreaHighGrayLevelEmphasis,,"{""force2D"": False}"
+szm_glnu_3D,,original_glszm_GrayLevelNonUniformity,,"{""force2D"": False}"
+szm_glnu_norm_3D,,original_glszm_GrayLevelNonUniformityNormalized,,"{""force2D"": False}"
+szm_zsnu_3D,,original_glszm_SizeZoneNonUniformity,,"{""force2D"": False}"
+szm_zsnu_norm_3D,,original_glszm_SizeZoneNonUniformityNormalized,,"{""force2D"": False}"
+szm_z_perc_3D,,original_glszm_ZonePercentage,,"{""force2D"": False}"
+szm_gl_var_3D,,original_glszm_GrayLevelVariance,,"{""force2D"": False}"
+szm_zs_var_3D,,original_glszm_ZoneVariance,,"{""force2D"": False}"
+szm_zs_entr_3D,,original_glszm_ZoneEntropy,,"{""force2D"": False}"
+ngt_coarseness_3D,,original_ngtdm_Coarseness,,"{""force2D"": False}"
+ngt_contrast_3D,,original_ngtdm_Contrast,,"{""force2D"": False}"
+ngt_busyness_3D,,original_ngtdm_Busyness,,"{""force2D"": False}"
+ngt_complexity_3D,,original_ngtdm_Complexity,,"{""force2D"": False}"
+ngt_strength_3D,,original_ngtdm_Strength,,"{""force2D"": False}"
+ngl_lde_3D,,original_gldm_SmallDependenceEmphasis,,"{""force2D"": False}"
+ngl_hde_3D,,original_gldm_LargeDependenceEmphasis,,"{""force2D"": False}"
+ngl_lgce_3D,,original_gldm_LowGrayLevelEmphasis,,"{""force2D"": False}"
+ngl_hgce_3D,,original_gldm_HighGrayLevelEmphasis,,"{""force2D"": False}"
+ngl_ldlge_3D,,original_gldm_SmallDependenceLowGrayLevelEmphasis,,"{""force2D"": False}"
+ngl_ldhge_3D,,original_gldm_SmallDependenceHighGrayLevelEmphasis,,"{""force2D"": False}"
+ngl_hdlge_3D,,original_gldm_LargeDependenceLowGrayLevelEmphasis,,"{""force2D"": False}"
+ngl_hdhge_3D,,original_gldm_LargeDependenceHighGrayLevelEmphasis,,"{""force2D"": False}"
+ngl_glnu_3D,,original_gldm_GrayLevelNonUniformity,,"{""force2D"": False}"
+ngl_glnu_norm_3D,,original_firstorder_Uniformity,,"{""force2D"": False}"
+ngl_dcnu_3D,,original_gldm_DependenceNonUniformity,,"{""force2D"": False}"
+ngl_dcnu_norm_3D,,original_gldm_DependenceNonUniformityNormalized,,"{""force2D"": False}"
+ngl_gl_var_3D,,original_gldm_GrayLevelVariance,,"{""force2D"": False}"
+ngl_dc_var_3D,,original_gldm_DependenceVariance,,"{""force2D"": False}"
+ngl_dc_entr_3D,,original_gldm_DependenceEntropy,,"{""force2D"": False}"

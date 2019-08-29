@@ -1,0 +1,80 @@
+setting:
+  interpolator: sitkBSpline
+  resampledPixelSpacing: [3, 3, 3]
+
+  resegmentMode: absolute
+  resegmentRange: [0]
+
+  binWidth: 0.25
+
+  distances: [1]
+  correctMask: true
+
+  weightingNorm:
+
+featureClass:
+  glcm:
+    - Autocorrelation
+    - ClusterProminence
+    - ClusterShade
+    - ClusterTendency
+    - Contrast
+    - Correlation
+    - DifferenceAverage
+    - DifferenceEntropy
+    - DifferenceVariance
+    - Id
+    - Idm
+    - Idmn
+    - Idn
+    - Imc1
+    - Imc2
+    - InverseVariance
+    - JointAverage
+    - JointEnergy
+    - JointEntropy
+    - MaximumProbability
+    - SumAverage
+    - SumEntropy
+    - SumSquares
+  glrlm:
+  gldm:
+  ngtdm:
+  glszm:
+  firstorder:
+    - 10Percentile
+    - 90Percentile
+    - Energy
+    - InterquartileRange
+    - Kurtosis
+    - Maximum
+    - Mean
+    - MeanAbsoluteDeviation
+    - Median
+    - Minimum
+    - Range
+    - RobustMeanAbsoluteDeviation
+    - RootMeanSquared
+    - Skewness
+    - StandardDeviation
+    - Variance
+    - Entropy
+    - Uniformity
+  shape:
+    - MeshVolume
+    - VoxelVolume
+    - SurfaceArea
+    - SurfaceVolumeRatio
+    - Compactness1
+    - Compactness2
+    - SphericalDisproportion
+    - Sphericity
+    - Maximum3DDiameter
+    - MajorAxisLength
+    - MinorAxisLength
+    - LeastAxisLength
+    - Elongation
+    - Flatness
+
+imageType:
+  Original: {}

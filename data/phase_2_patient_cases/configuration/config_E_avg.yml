@@ -2,12 +2,14 @@ imageType:
   Original: {}
 
 setting:
-  binWidth: 25
+  binCount: 32
 
-  interpolator: 'sitkLinear'
+  interpolator: 'sitkBSpline'
   resampledPixelSpacing: [2, 2, 2]
 
-  resegmentRange: [-1000, 400]
+  resegmentRange: [-718, 400]  # [-1000, 400] absolute, [-3, 3] sigma
+
+  weightingNorm:
 
 featureClass:
   firstorder:

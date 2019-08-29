@@ -9,6 +9,8 @@ setting:
 
   resegmentRange: [-500, 400]
 
+  weightingNorm:
+
 featureClass:
   firstorder:
     - 10Percentile

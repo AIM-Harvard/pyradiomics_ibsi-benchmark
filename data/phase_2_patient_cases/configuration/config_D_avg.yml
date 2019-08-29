@@ -5,11 +5,12 @@ setting:
   binCount: 32
 
   interpolator: 'sitkLinear'
-  resampledPixelSpacing: [2, 2, 0]
+  resampledPixelSpacing: [2, 2, 2]
 
-  resegmentRange: [-500, 400]
+  resegmentRange: [-3, 3]
+  resegmentMode: 'sigma'
 
-  force2D: True
+  weightingNorm:
 
 featureClass:
   firstorder:
