@@ -152,6 +152,8 @@ class IbsiBenchmark:
   def run_phantom(self):
     self.logger.info('################################### Extracting Phantom #############################')
     extractor = featureextractor.RadiomicsFeatureExtractor()
+    extractor.settings['IBSI_BINNING'] = IBSI_BINNING
+    extractor.settings['IBSI_RESAMPLING'] = IBSI_RESAMPLING
 
     extraction_types = self.ibsi_settings.get('extraction_types', ['avg', 'comb'])
     correct_kurtosis = self.ibsi_settings.get('correct_kurtosis', True)
@@ -203,10 +205,13 @@ class IbsiBenchmark:
     image = sitk.ReadImage(os.path.join(data_dir, 'PAT1', 'PAT1.nrrd'))
     mask = sitk.ReadImage(os.path.join(data_dir, 'PAT1', 'GTV.nrrd'))
 
+    extractor = featureextractor.RadiomicsFeatureExtractor()
+    extractor.settings['IBSI_BINNING'] = IBSI_BINNING
+    extractor.settings['IBSI_RESAMPLING'] = IBSI_RESAMPLING
+
     for case_idx in cases:
 
       self.logger.info('################################## Extracting Case %s ############################' % case_idx)
-      extractor = featureextractor.RadiomicsFeatureExtractor()
 
       result_series = pd.Series()
       for t in extraction_types:
@@ -255,6 +260,9 @@ class IbsiBenchmark:
       params_file = os.path.join(params_dir, mod + '.yml')
       extractor = featureextractor.RadiomicsFeatureExtractor(params_file)
 
+      extractor.settings['IBSI_BINNING'] = IBSI_BINNING
+      extractor.settings['IBSI_RESAMPLING'] = IBSI_RESAMPLING
+
       if gray_value_rounding and IBSI_RESAMPLING:
         extractor.settings['grayValuePrecision'] = 0  # round to nearest integer when using IBSI resampling
 
@@ -273,7 +281,6 @@ class IbsiBenchmark:
 
         results = results.append(fv)
     return results
-
 
   def _parse_dict(self, str_val):
     if pd.isnull(str_val):
