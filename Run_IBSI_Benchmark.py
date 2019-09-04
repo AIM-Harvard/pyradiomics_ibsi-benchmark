@@ -14,8 +14,8 @@ from radiomics import setVerbosity, featureextractor
 if not os.path.isdir("results"):
   os.mkdir("results")
 
-IBSI_BINNING = False
-IBSI_RESAMPLING = False
+IBSI_BINNING = True
+IBSI_RESAMPLING = True
 
 
 def IBSI_binning(parameterValues, **kwargs):
@@ -318,7 +318,7 @@ if __name__ == '__main__':
   benchmark = IbsiBenchmark(mapping_file)
 
   results_phase_3 = benchmark.run_phase3()
-  results_phase_3.to_csv('%s/results_phase3.csv' % results_folder)
+  results_phase_3.to_csv('%s/results_phase3_ibsi_resampling_binning.csv' % results_folder)
   exit(0)
   results_phantom = benchmark.run_phantom()
   results_phantom.sort_index().to_csv('%s/results_phantom.csv' % results_folder)
