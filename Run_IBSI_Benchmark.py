@@ -46,7 +46,13 @@ def IBSI_binning(parameterValues, **kwargs):
     # #####################################
     if resegmentRange is not None:
       if resegmentMode == 'absolute':
-        lowBound = min(resegmentRange)
+        resegment_min = min(resegmentRange)
+        if resegment_min > lowBound:
+          ibsiLogger.warning(
+            'lower bound of resegment range (%-.3g) lower than found minimum (%-.3g), using found minimum',
+            resegment_min, lowBound)
+        else:
+          lowBound = min(resegmentRange)
       elif resegmentMode == 'sigma':
         lowBound = minimum
     # #####################################
